@@ -1,13 +1,22 @@
-/**
- * Implement a parallel array sum, and compare performance with single thread sum.
- *
- * Make an array of 200 million random numbers between 1 and 10. Compute the sum in parallel using multiple threads.
- * Then compute the sum with only one thread, and display the sum and times for both cases.
- */
-
 import java.util.Random;
 
+/**
+ * The program uses an array of 200 million random numbers between 1 and 10, and implements a parallel sum and a linear sum to add the numbers and return the total sum.
+ * Also, it compares the performance, in milliseconds, between the linear sum, which is a single thread sum, and the parallel sum, which is a multi thread sum.
+ *
+ * The ParallelSumLauncher contains the main method.
+ *
+ * @author Estefania G. Sanchez Cabrejos
+ * @version 1.0
+ * @since 2021-11-17
+ */
 public class ParallelSumLauncher {
+
+    /**
+     * This is the main method, in here the calls to other classes that execute the main logic of the sums are made.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         int numOfCores = Runtime.getRuntime().availableProcessors();
         int[] randomNumsArray = new int[200000000];
